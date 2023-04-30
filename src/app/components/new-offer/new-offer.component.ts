@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TableOffersComponent } from '../table-offers/table-offers.component';
 
 @Component({
   selector: 'app-new-offer',

@@ -7,7 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { TableOffersComponent } from './components/table-offers/table-offers.component';
 import { NewOfferComponent } from './components/new-offer/new-offer.component';
 import { EditOfferComponent } from './components/edit-offer/edit-offer.component';
-
+import { MaterialModule } from './shared/material.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { EditOfferComponent } from './components/edit-offer/edit-offer.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
