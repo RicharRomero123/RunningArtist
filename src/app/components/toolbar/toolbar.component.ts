@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent {
+  public showHamburger = false;
+
+  ngOnInit(): void {
+    this.showHamburger = window.innerWidth <= 768;
+    window.onresize = () => {
+      this.showHamburger = window.innerWidth <= 768;
+    };
+  }
+
 
 }

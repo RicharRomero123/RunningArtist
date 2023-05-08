@@ -9,3 +9,12 @@
 .Running{
     padding-left: 5%;
 }
+
+@media screen and (max-width: 768px) {
+  .mat-menu-content {
+    background-color: white;
+    width: 100%;
+    max-width: none;
+    
+  }
+}

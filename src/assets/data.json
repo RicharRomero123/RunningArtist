@@ -1,43 +1,39 @@
 {
-    "offers":[
-        {
-            
-            "id":1,
-            "title":"Anvorguesa",
-            "description": "Eplae",
-            "points": 2234,
-            "businessId": "A012"
-        },
-        {
-            "id": 2,
-            "title": "Burguerz",
-            "description": "Cadena de restaurantes especializada en hamburguesas de alta calidad.",
-            "points": 789,
-            "businessId": "A013"
-          },
-          
-          {
-            "id": 3,
-            "title": "Cheesyme",
-            "description": "Empresa de productos lácteos que se dedica a la producción de quesos de alta calidad.",
-            "points": 4500,
-            "businessId": "A015"
-          },
-          
-          {
-            "id": 4,
-            "title": "Friesland",
-            "description": "Cadena de restaurantes especializada en patatas fritas de diferentes sabores y texturas.",
-            "points": 1234,
-            "businessId": "A011"
-          },
-          
-          {
-            "id": 5,
-            "title": "Pattibites",
-            "description": "Empresa de alimentos que se dedica a la producción de alimentos congelados como hamburguesas, nuggets y otros productos similares.",
-            "points": 982,
-            "businessId": "A017"
-          }
-    ]
+  "offers": [
+    {
+      "id": 1,
+      "title": "Anvorguesa",
+      "description": "Eplae",
+      "points": 2234,
+      "businessId": "A012"
+    },
+    {
+      "id": 2,
+      "title": "Burguerz",
+      "description": "Cadena de restaurantes especializada en hamburguesas de alta calidad.",
+      "points": 789,
+      "businessId": "A013"
+    },
+    {
+      "id": 3,
+      "title": "Cheesyme",
+      "description": "Empresa de productos lácteos que se dedica a la producción de quesos de alta calidad.",
+      "points": 4500,
+      "businessId": "A015"
+    },
+    {
+      "id": 4,
+      "title": "Friesland",
+      "description": "Cadena de restaurantes especializada en patatas fritas de diferentes sabores y texturas.",
+      "points": 1234,
+      "businessId": "A011"
+    },
+    {
+      "id": 5,
+      "title": "Pattibites",
+      "description": "Empresa de alimentos que se dedica a la producción de alimentos congelados como hamburguesas, nuggets y otros productos similares.",
+      "points": 982,
+      "businessId": "A017"
+    }
+  ]
 }

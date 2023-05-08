@@ -1,1 +1,18 @@
 <p>edit-offer works!</p>
+<form  #OfferForm='ngForm'>
+
+    <mat-form-field><input matInput placeholder="title" name = "title" required [(ngModel)]="OfferData.title"></mat-form-field>
+    <mat-form-field><input type="text" matInput placeholder="description" name = "Description" required [(ngModel)]="OfferData.description"></mat-form-field>
+    <mat-form-field><input type="text" matInput placeholder="points" name = "Points" required [(ngModel)]="OfferData.points"></mat-form-field>
+    <mat-form-field><input type="text" matInput placeholder="businessId" name = "BusinessId" required [(ngModel)]="OfferData.businessId"></mat-form-field>
+    <ng-container>
+      <button mat-button color="primary" (click)="updateOffer()">Update</button>&nbsp;
+      <button mat-button color="warn" (click)="cancelEdit()">Cancel</button>
+    </ng-container>&nbsp;
+    
+</form>
+
+
+<a  mat-stroked-button color="primary" routerLink="/business/offers">
+    Back to Offers table<mat-icon>home</mat-icon>
+</a>

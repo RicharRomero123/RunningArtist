@@ -1,8 +1,16 @@
 <mat-toolbar color="primary">
     <span class="Running">Running Artist</span>
     <div class="Buttons">
-      <button mat-button routerLink="/home">Home</button>
-      <button mat-button routerLink="/business/offers">Offers</button>
+
+      <button mat-button [matMenuTriggerFor]="menu" *ngIf="showHamburger"><mat-icon>menu</mat-icon></button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/home">Home</button>
+        <button mat-menu-item routerLink="/business/offers">Offers</button>
+      </mat-menu>
+      <div *ngIf="!showHamburger">
+        <button mat-button routerLink="/home">Home</button>
+        <button mat-button routerLink="/business/offers">Offers</button>
+      </div>
     </div>
 </mat-toolbar>
   

@@ -1,2 +1,52 @@
 <p>table-offers works!</p>
-<button mat-button color="warn"> Add new Offers! </button>
+
+<button mat-button color="warn" routerLink="/admin/offers/new"> Add new Offers! </button>
+
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Id Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>ID</th>
+    <td mat-cell *matCellDef="let element">{{element.id}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef>Title</th>
+    <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+  </ng-container>
+   
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef>Description</th>
+    <td mat-cell *matCellDef="let element">{{element.description}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="points">
+    <th mat-header-cell *matHeaderCellDef>Points</th>
+    <td mat-cell *matCellDef="let element"> {{element.points}} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="businessId">
+    <th mat-header-cell *matHeaderCellDef>BusinessId</th>
+    <td mat-cell *matCellDef="let element"> {{element.businessId}} </td>
+  </ng-container>
+  
+  
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td mat-cell *matCellDef="let element">
+        <a mat-raised-button color="accent"(click)="editItem(element)" [routerLink]="['/admin/offers/edit', element.id]">
+            Edit<mat-icon>edit</mat-icon>
+        </a>
+        <a mat-raised-button color="warn"(click)="deleteItem(element.id)">
+            <mat-icon>delete</mat-icon>
+        </a>
+    </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons aria-label="Select page"></mat-paginator>
