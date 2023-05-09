@@ -21,6 +21,7 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatMenuModule} from '@angular/material/menu';
   HomeComponent,
   TableOffersComponent,
   NewOfferComponent,
-  EditOfferComponent
+  EditOfferComponent,
+  NotFoundComponent
   ],
   imports: [
     BrowserModule,
