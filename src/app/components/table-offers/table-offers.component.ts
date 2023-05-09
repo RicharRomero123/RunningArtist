@@ -31,13 +31,9 @@ export class TableOffersComponent {
   sort!:MatSort;
   
   
-  
   constructor(private offersService:RunningService) {
     this.OfferData = {} as Offers
   }
-
- 
-
 
   ngOnInit(): void{
     this.dataSource.paginator = this.paginator;
@@ -52,12 +48,6 @@ export class TableOffersComponent {
       this.dataSource.data = response
       
     })
-  }
-
-  editItem(element: any)
-  {
-    this.OfferData = _.cloneDeep(element);
-    this.isEditMode = true;
   }
 
   deleteItem(id:string)

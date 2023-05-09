@@ -3,12 +3,16 @@
   <form #OfferForm='ngForm'>
 
     <mat-form-field><input matInput placeholder="title" name = "title" required [(ngModel)]="OfferData.title"></mat-form-field>
-    <mat-form-field><input type="text" matInput placeholder="description" name = "Description" required [(ngModel)]="OfferData.description"></mat-form-field>
-    <mat-form-field><input type="text" matInput placeholder="points" name = "Points" required [(ngModel)]="OfferData.points"></mat-form-field>
+    <mat-form-field><input type="text" matInput #message maxlength="60" placeholder="description" name = "Description" required [(ngModel)]="OfferData.description">
+      <mat-hint align ="end">{{message.value.length}} / 60</mat-hint>
+    </mat-form-field>
+    <mat-form-field><input type="number" matInput placeholder="points" name = "Points" required [(ngModel)]="OfferData.points"  max="100">
+      <mat-error *ngIf="OfferData.points > 100">El valor máximo permitido es 100</mat-error>
+    </mat-form-field>
     <mat-form-field><input type="text" matInput placeholder="businessId" name = "BusinessId" required [(ngModel)]="OfferData.businessId"></mat-form-field>
     
     
-    <button mat-button color="primary" (click)="addMovie()">Add</button>
+    <button *ngIf="OfferData.points < 100"  mat-button color="primary" (click)="addMovie()">Add</button>
     
     
   </form>

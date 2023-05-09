@@ -21,6 +21,7 @@ export class NewOfferComponent {
   {
     this.OfferData.id = 0;
     this.offersService.createItem(this.OfferData).subscribe((response:any)=>{
+      response.points = parseInt(response.points)
       this.dataSource.data.push({...response});
       this.dataSource.data = this.dataSource.data.map((o: any)=> {return 0;});
     });

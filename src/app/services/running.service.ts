@@ -40,7 +40,7 @@ export class RunningService {
     .pipe(retry(2),catchError(this.handleError));
   }
 
-  getItem(id:String):Observable<Offers>
+  getItem(id:string|null):Observable<Offers>
   {
     return this.http.get<Offers>(this.base_Url+'/'+id)
     .pipe(retry(2),catchError(this.handleError));
